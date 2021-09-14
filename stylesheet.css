@@ -1,0 +1,10 @@
+/* Variables */
+:root{
+  --blue: #0065FC;
+  --light-blue: #DEEBFF;
+  --grey: #F2F2F2;
+}
+/* General Layout */
+.body {
+  font-family: 'Raleway, sans-serif';
+}
