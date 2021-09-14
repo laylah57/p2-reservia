@@ -1,10 +1,49 @@
 /* Variables */
-:root{
+:root {
   --blue: #0065FC;
   --light-blue: #DEEBFF;
   --grey: #F2F2F2;
+  --main-font: 'Raleway', sans serif;
 }
 /* General Layout */
-.body {
-  font-family: 'Raleway, sans-serif';
+/* Div */
+.flex-container {
+  display: flex;
+  position: relative;
+}
+
+/* Lists and buttons */
+ul {
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+li {
+  display: flex;
+  float: right;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+li:hover {
+  color: var(--blue);
+}
+
+/* Typography */
+body {
+  font-family: var(--main-font);
+}
+
+/* Headings */
+h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* Exceptions*/
+.logo {
+  float: left;
+  padding: 0;
 }
