@@ -6,10 +6,8 @@
         <viewport></viewport>
         <meta description="Envie d'une échappée belle? Reservia vous accompagne dans votre recherche des meilleures vacances que vous ayez jamais passées. Insrivez-vous vite!" />
         <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
-        <link rel="stylesheet" type="text/css" href="./resources/fontawesome.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="./resources/fontawesome/css/solid.min.css"/>
+        <link rel="stylesheet" type="text/css" href="./resources/fontawesome/css/fontawesome.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;700&display=swap" rel="stylesheet" />
@@ -19,7 +17,7 @@
         <div class="flex-container">
         <ul class="menu-logo">
             <li class>
-                <img src="./img/images/logo/Reservia.svg">
+                <img src="./resources/img/logo/Reservia.svg">
             </li>
         </ul>
         <ul class="menu">
@@ -27,7 +25,7 @@
                 <a href="#accomodations">Hébergement</a>
             </li>
             <li class="nav-item">
-                <a href="#what_to_do">Activités</a>
+                <a href="#what-to-do">Activités</a>
             </li>
             <li class="static">
                 <a>S'inscrire</a>
@@ -37,40 +35,76 @@
         <div>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
-            <span class="searchbar">
-                <button><i class="fa-search"></i></button>
-                <input type="text" placeholder="Marseilles">
+            <span style="display: flexbox;">
+                <i class="fas fa-lg fa-map-marker-alt"></i>
+                <input type="text" placeholder="Marseille">
+                <button>Rechercher</button>
             </span>
         </div>
         <div class="flex-container">
-            <ul class="filters">
-                <li class="filters-items">
-                    <p>Filtres</p>
+            <ul class="filters" style="padding: 0;">
+                <li style="text-decoration: none; list-style-type: none;">
+                    Filtres
                 </li>
                 <li class="filters-items">
-                    <!--Add accent-->    
-                    <p>Economique</p>
+                    <!--Add accent--> 
+                    <span class="filters-icons">
+                        <i class="fas fa-money-bill-wave fa-fw"></i>
+                        &Eacute;conomique
+                    </span>
                 </li>
                 <li class="filters-items">
-                    <p>Familial</p>
+                    <span class="filters-icons">
+                        <i class="fas fa-child fa-fw"></i>
+                        Famille
+                    </span>
                 </li>
                 <li class="filters-items">
-                    <p>Romantique</p>
+                    <span class="filters-icons">
+                        <i class="fas fa-heart fa-fw"></i>
+                        Romantique
+                    </span>
                 </li>
                 <li class="filters-items">
-                    <p>Animaux autorisés</p>     
+                    <span class="filters-icons">
+                        <i class="fas fa-dog fa-fw"></i>
+                        <span>Animaux autorisés</span>
+                    </span>     
                 </li>
             </ul>
         </div>
-        <div class="item">
-            <a id="accomodations">
-                <h2>Hébergement</h2>
-            </a>
-            <div class="white-item">
-                <img src="./img/images/logo/Reservia.svg">
+        <i class="fa fa-info-circle fa-lg"></i><p>Plus de 500 logements disponibles dans cette ville</p>
+        <div class="flex-container" style="justify-content: space-between;">
+            <div class="grey-container" style="width: 60%;">
+                <a id="accomodations"></a>
+                <h2>Hébergements à Marseille</h2>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
+            </div>
+            <div class="grey-container" style="width: 30%; justify-content: flex-end;">
+                <h2>Les plus populaires</h2>
+                <div class="white-item">
+                    <img class="accomodation-block" src="./resources/img/accomodations/bunkbeds.jpg">
+                </div>
             </div>
         </div>
-        <a id="#what_to_do">
+        <a id="#what-to-do">
             <h2>Activités</h2>
         </a>
         <div class="item">

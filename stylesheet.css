@@ -14,20 +14,27 @@ body {
 
 /* Div */
 div {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 .flex-container {
-  display: inline-flex;
-}
-.item {
   display: flex;
+}
+
+.grey-container {
   background-color: var(--grey);
   border-radius: 1vh;
+  padding: 2rem;
+  width: fit-content;
 }
 
 .white-item {
-  display: flex;
+  align-content: space-between;
+  display: inline-flex;
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: white;
   border-radius: 1vh;
 }
@@ -53,6 +60,7 @@ div {
   text-align: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  border-top: solid transparent;
 }
 
 .nav-item:hover {
@@ -89,11 +97,11 @@ a {
   margin: 0;
 }
 .filters-items {
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  border: 1px solid var(--grey);
+  border-radius: 10vh;
+  width: 12rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Typography */
@@ -110,6 +118,26 @@ h1 {
 h2 {
   padding-left: 1rem;
 }
+
 /* Objects*/
+.searchbar {
+  border: 2px solid var(--grey);
+  border-radius: 1vh;
+}
+ 
+input
+/* Images */
+.accomodation-block {
+  height: 10rem;
+}
 
-
+.filters-icons {
+  display: flex;
+  margin-inline-end: 5rem;
+  border: 1px solid var(--light-blue);
+  background-color: var(--light-blue);
+  border-radius: 100px;
+  padding: 1rem;
+  height: 16px;
+  width: 20px;
+}
