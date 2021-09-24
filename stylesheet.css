@@ -13,50 +13,87 @@ body {
 }
 
 /* Div */
-.flex-container {
-  display: flex;
-  position: relative;
+div {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.item{
+.flex-container {
+  display: inline-flex;
+}
+.item {
   display: flex;
-  position: relative;
-  height: 10rem;
   background-color: var(--grey);
   border-radius: 1vh;
 }
 
-/* Lists*/
-ul {
-  overflow: hidden;
-  padding-left: 2rem;
-  padding-right: 2rem;
+.white-item {
+  display: flex;
+  background-color: white;
+  border-radius: 1vh;
 }
 
-li.navbar {
+/* Navbar */
+.menu {
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+}
+.menu-logo {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-item {
   display: flex;
-  float: right;
+  align-items: center;
   list-style-type: none;
   text-align: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-li.filters {
+.nav-item:hover {
+  color: var(--blue);
+  border-top: solid var(--blue);
+}
+
+.static {
   display: flex;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.static:hover {
+  color: var(--blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Filters */
+
+.filters {
+  display: inline-flex;
   float: left;
   list-style-type: none;
   text-align: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  margin: 0;
 }
-
-/* Navlinks */
-a {
-  text-decoration: none;
-}
-a:hover {
-  color: var(--blue);
-  border-top: solid var(--blue);
+.filters-items {
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /* Typography */
@@ -69,10 +106,10 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
 }
-/* Objects*/
-.logo {
-  float: left;
-  padding: 0;
-  list-style-type: none;
+
+h2 {
+  padding-left: 1rem;
 }
+/* Objects*/
+
 
