@@ -102,6 +102,8 @@ a {
   width: 12rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  padding: 0;
+  justify-content: flex-end;
 }
 
 /* Typography */
@@ -133,7 +135,6 @@ input
 
 .filters-icons {
   display: flex;
-  margin-inline-end: 5rem;
   border: 1px solid var(--light-blue);
   background-color: var(--light-blue);
   border-radius: 100px;
