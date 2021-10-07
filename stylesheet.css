@@ -9,15 +9,10 @@
 
 /* General Layout */
 body {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 1rem;
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-}
-
+/*
 .grey-container {
   background-color: var(--grey);
   border-radius: 1vh;
@@ -27,76 +22,68 @@ body {
 
 .white-item {
   align-content: space-between;
-  display: inline-flex;
+  display: flex;
   width: fit-content;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: white;
   border-radius: 1vh;
-}
+} */
 
 /* Navbar */
 .menu {
-  display: inline-flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.menu-logo {
-  padding: 0;
-  list-style-type: none;
+  display: flex;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-inline-start: 0;
+  overflow: visible;
 }
 
 .nav-item {
   display: flex;
-  align-items: center;
+  flex: 1 1 0px;
+  justify-content: center;
   list-style-type: none;
-  text-align: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: solid transparent;
-}
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: solid var(--grey);
+} 
 
 .nav-item:hover {
   color: var(--blue);
-  border-top: solid var(--blue);
+  border-bottom: solid var(--blue);
 }
 
-.static {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 1.5rem;
-}
-
-.static:hover {
+.get-account {
+  font-weight: bold;
   color: var(--blue);
 }
 
 a {
   text-decoration: none;
+} 
+
+.menu-logo-container {
+  display: flex;
+  justify-content:space-between;
 }
 
 /* Filters */
 
 .filters {
   display: flex;
-  list-style-type: none;
-  padding-inline-start: 0;
+  gap: 0.5rem 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filters-title {
+  font-weight: bold;
 }
 
 .filters-items {
   display: flex;
   border: 2px solid var(--grey);
   border-radius: 100px;
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .filters-icons {
@@ -104,7 +91,7 @@ a {
   border: 1px solid var(--light-blue);
   background-color: var(--light-blue);
   border-radius: 100px;
-  padding: 1rem;
+  padding: 0.7rem;
 }
 
 .filters-icons:hover {
@@ -119,44 +106,41 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
   font-weight: bold;
-}
+} 
 
 /* Typography */
 body {
   font-family: var(--main-font);
-}
+} 
 
 /* Headings */
-h1 {
+ h1 {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 h2 {
   padding-left: 1rem;
-}
+} 
 
 /* Objects*/
 .searchbar {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border: 2px solid var(--grey);
-  border-radius: 10px;
-  background-color: var(--grey);
-  width: fit-content;
+  border: 1px solid var(--grey);
+  border-radius: 12px;
+  width: 100%;
   height: 2.5rem;
 }
 
-.searchbar-icon {
+.searchbar-map-icon {
   text-align: center;
   background-color: var(--grey);
-  border-radius: 10px 0 0 10px;
-  width: 2.5rem;
-}
-
-.searchbar-button:hover {
-  background-color: var(--light-blue);
-  color: var(--blue);
+  border-radius: 5px 0 0 5px;
+  width: 3.5rem;
+  height: inherit;
+  line-height: 1.75em;
 }
 
 .searchbar-input {
@@ -166,16 +150,29 @@ h2 {
   font-weight: bold;
   height: inherit;
   padding-inline-start: 1rem;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .searchbar-button {
   border: none;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   background-color: var(--blue);
   font-family: var(--main-font);
   font-weight: bold;
   color: white;
   height: inherit;
+  width: 3.5rem;
+}
+
+.searchbar-search-icon {
+  text-align: center;
+}
+
+.searchbar-button:hover {
+  background-color: var(--light-blue);
+  color: var(--blue);
 }
 
 .info-icon {
@@ -184,12 +181,17 @@ h2 {
   border-radius: 100px;
   width: 16px;
   height: 16px;
-  padding: 0.5%;
+  padding: 0.2rem;
   text-align: center;
-  float: left;
+  margin: 0.5rem;
 }
- 
+
 /* Images */
-.accomodation-block {
+ .accomodation-block {
   height: 10rem;
+} 
+
+.info {
+  display: flex;
+  align-items: baseline;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Reservia: des vacances de rêve</title>
-        <viewport></viewport>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta description="Envie d'une échappée belle? Reservia vous accompagne dans votre recherche des meilleures vacances que vous ayez jamais passées. Insrivez-vous vite!" />
         <link rel="stylesheet" type="text/css" href="./stylesheet.css"/>
         <link rel="stylesheet" type="text/css" href="./resources/fontawesome/css/solid.min.css"/>
@@ -14,56 +14,60 @@
         <!--Add missing elements-->
     </head>
     <body>
+        <!--Header-->
+        <div class="menu-logo-container">
+            <picture>
+                <source srcset="./resources/img/logo/Reservia.svg" />
+                <source srcset="./resources/img/logo/Reservia@3x.png"/>
+                <img class="logo" src="./resources/img/logo/Reservia.svg" alt="Logo Reservia" width="97" height="45">   
+            </picture>
+            <p class="get-account">S'inscrire</p>
+        </div>
         <div class="flex-container">
-            <ul class="menu-logo">
-                <li class>
-                    <img src="./resources/img/logo/Reservia.svg">
-                </li>
-            </ul>
             <ul class="menu">
                 <li class="nav-item">
-                    <a href="#accomodations">Hébergement</a>
+                    <a href="#accomodations">Hébergements</a>
                 </li>
                 <li class="nav-item">
                     <a href="#what-to-do">Activités</a>
-                </li>
-                <li class="static">
-                    <a>S'inscrire</a>
                 </li>
             </ul>
         </div>
         <div>
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
-            <span class="searchbar">
-                <i class="fas fa-lg fa-map-marker-alt searchbar-icon"></i>
-                <input class="searchbar-input" type="text" placeholder="Marseille, France">
-                <button class="searchbar-button" type="button">Rechercher</button>
-            </span>
-            <ul class="filters">
-                <li class="filters-text" style="padding-left: 0;">
-                    Filtres
-                </li>
-                <li class="filters-items">
+            <div class="flex-container" style="justify-content: center;">
+                <span class="searchbar">
+                    <i class="fas fa-lg fa-map-marker-alt searchbar-map-icon" style="line-height: 1.75em;"></i>
+                    <input class="searchbar-input" type="text" placeholder="Marseille, France">
+                    <button class="searchbar-button" type="button"><i class="fas fa-lg fa-search searchbar-search-icon"></i></button>
+                </span>
+            </div>
+            <p class="filters-title">Filtres</p>
+            <div class="filters">
+                <div class="filters-items">
                     <i class="fas fa-money-bill-wave fa-fw filters-icons"></i>
                     <span class="filters-text">&Eacute;conomique</span>
-                </li>
-                <li class="filters-items">
+                </div>
+                <div class="filters-items">
                     <i class="fas fa-child fa-fw filters-icons"></i>
                     <span class="filters-text">Famille</span>
-                </li>
-                <li class="filters-items">
+                </div>
+                <div class="filters-items">
                     <i class="fas fa-heart fa-fw filters-icons"></i>
                     <span class="filters-text">Romantique</span>
-                </li>
-                <li class="filters-items">
+                </div>
+                <div class="filters-items">
                     <i class="fas fa-dog fa-fw filters-icons"></i>
                     <span class="filters-text">Animaux autorisés</span>     
-                </li>
-            </ul>
+                </div>
+            </div>
+           <div class="info">
             <i class="fa fa-info info-icon"></i>
             <p>Plus de 500 logements disponibles dans cette ville</p>
+           </div>  
         </div>
+        <!--Main-->
         <div class="flex-container" style="justify-content: space-between;">
             <div class="grey-container" style="width: 60%;">
                 <a id="accomodations"></a>
@@ -94,9 +98,8 @@
                 </div>
             </div>
         </div>
-        <a id="#what-to-do">
+        <a id="what-to-do"></a>
             <h2>Activités</h2>
-        </a>
         <div class="item">
         </div>
     </body>
