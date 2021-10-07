@@ -12,12 +12,12 @@ body {
   margin: 1rem;
 }
 
-/*
-.grey-container {
+.top-accomodations-container {
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--grey);
-  border-radius: 1vh;
-  padding: 2rem;
-  width: fit-content;
+  width: 100%;
+  gap: 1rem 1rem;
 }
 
 .white-item {
@@ -28,7 +28,7 @@ body {
   padding-right: 1rem;
   background-color: white;
   border-radius: 1vh;
-} */
+} 
 
 /* Navbar */
 .menu {
@@ -194,4 +194,50 @@ h2 {
 .info {
   display: flex;
   align-items: baseline;
+}
+
+.top-accomodations {
+  display:flex;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+  align-items: baseline;
+
+}
+
+.top-accomodations-box {
+  display:flex;
+  background-color: white;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.top-accomodations-image {
+  width: 150px;
+  height: 125px;
+  border-radius: 12px 0 0 12px;
+  padding: 0.3rem;
+}
+
+.top-accomodations-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+
+
+.top-accomodations-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.top-accomodations-description-text {
+  display: flex;
+  align-items: flex-start;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: flex-end;
 }
