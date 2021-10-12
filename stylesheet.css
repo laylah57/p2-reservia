@@ -5,22 +5,66 @@
   --grey: #F2F2F2;
   --main-font: 'Raleway', sans serif;
   --main-font-color: black;
-  --main-padding: 1rem;
+  --padding-bottom: 1.5rem;
+  --margin-x: 1rem;
 }
 
 /* General Layout */
 body {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: var(--margin-x);
+  margin-right: var(--margin-x);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: visible;
+  font-family: var(--main-font);
+}
+@media only screen and (min-width: 768px) {
+  body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
 .menu {
   display: flex;
   margin-left: -1rem;
   margin-right: -1rem;
+  margin-top: 0;
+  padding-bottom: var(--padding-bottom);
+  margin-bottom: 0;
   padding-inline-start: 0;
   overflow: visible;
+}
+
+.menu-logo-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-bottom: var(--padding-bottom);
 }
 
 .nav-item {
@@ -28,8 +72,7 @@ body {
   flex: 1 1 0px;
   justify-content: center;
   list-style-type: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: solid var(--grey);
 } 
 
@@ -41,27 +84,84 @@ body {
 .get-account {
   font-weight: bold;
   color: var(--blue);
+  align-self: flex-start;
 }
 
 a {
   text-decoration: none;
 } 
 
-.menu-logo-container {
+/* Header */
+.header-title{
+  padding-bottom: var(--padding-bottom);
+}
+
+/* Searchbar */
+.searchbar-container {
+  display:flex;
+  justify-content: center;
+  padding-bottom: var(--padding-bottom);
+}
+
+.searchbar {
   display: flex;
-  justify-content:space-between;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--grey);
+  border-radius: 12px;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.fa-map-marker-alt {
+  text-align: center;
+  background-color: var(--grey);
+  border-radius: 5px 0 0 5px;
+  width: 3.5rem;
+  height: inherit;
+  line-height: 1.75em;
+}
+
+.searchbar-input {
+  border: none;
+  font-family: var(--main-font);
+  background-color: white;
+  font-weight: bold;
+  height: inherit;
+  padding-inline-start: var(--padding-bottom);
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.searchbar-button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--blue);
+  font-family: var(--main-font);
+  font-weight: bold;
+  color: white;
+  height: inherit;
+  width: 3.5rem;
+}
+
+.fa-search {
+  text-align: center;
 }
 
 /* Filters */
 
-.filters {
+.filters-container {
   display: flex;
   gap: 0.5rem 0.5rem;
   flex-wrap: wrap;
+  padding-bottom: var(--padding-bottom);
 }
 
 .filters-title {
   font-weight: bold;
+  display: flex;
+  width: 100%;
 }
 
 .filters-items {
@@ -87,94 +187,28 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--padding-bottom);
+  padding-right: var(--padding-bottom);
   font-weight: bold;
 } 
-
-/* Typography */
-body {
-  font-family: var(--main-font);
-} 
-
-/* Headings */
- h1 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Objects*/
-.searchbar {
+ /* Info */
+ .info-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--grey);
-  border-radius: 12px;
-  width: 100%;
-  height: 2.5rem;
+  align-items: baseline;
+  padding-bottom: var(--padding-bottom);
 }
 
-.searchbar-map-icon {
-  text-align: center;
-  background-color: var(--grey);
-  border-radius: 5px 0 0 5px;
-  width: 3.5rem;
-  height: inherit;
-  line-height: 1.75em;
-}
-
-.searchbar-input {
-  border: none;
-  font-family: var(--main-font);
-  background-color: white;
-  font-weight: bold;
-  height: inherit;
-  padding-inline-start: 1rem;
-  width: 100%;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.searchbar-button {
-  border: none;
-  border-radius: 10px;
-  background-color: var(--blue);
-  font-family: var(--main-font);
-  font-weight: bold;
-  color: white;
-  height: inherit;
-  width: 3.5rem;
-}
-
-.searchbar-search-icon {
-  text-align: center;
-}
-
-.searchbar-button:hover {
-  background-color: var(--light-blue);
-  color: var(--blue);
-}
-
-.info-icon {
+.fa-info {
+  font-size: 0.7rem;
   color: var(--blue);
   border: 1px solid var(--grey);
   border-radius: 100px;
   width: 16px;
-  height: 16px;
   padding: 0.2rem;
   text-align: center;
   margin: 0.5rem;
-}
-
-/* Images */
- .accomodation-block {
-  height: 10rem;
 } 
 
-.info {
-  display: flex;
-  align-items: baseline;
-}
 
 /* Top Hotels */
 .top-hotels-container {
@@ -182,8 +216,11 @@ body {
   flex-wrap: wrap;
   background-color: var(--grey);
   width: 100%;
-  gap: 1rem 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--padding-bottom);
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
   justify-content: center;
 }
 
@@ -197,41 +234,263 @@ body {
 .top-hotels {
   display:flex;
   flex-direction: column;
-  gap: 1rem 1rem;
 }
 
 .top-hotels-box {
   display:flex;
   background-color: white;
   border-radius: 12px;
-}
-
-.top-hotels-image {
-  width: 150px;
-  height: 125px;
-  border-radius: 12px 0 0 12px;
-  padding: 0.3rem;
-  float:left;
+  box-shadow: 1px 1px 10px lightgrey;
+  margin-bottom: 0.5rem;
 }
 
 .top-hotels-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  height: inherit;
+ padding: 0.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
 .hotel-name {
   font-weight: bold;
-  word-wrap: break-word;
 }
+
+.hotel-price {
+  font-size: 0.9rem;
+}
+
 
 .rating-stars {
   display: flex;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+.fa-star {
+  color: var(--grey);
+}
+
+.checked {
+  color: var(--blue);
 }
 
 /*Marseille Hotels*/
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.hotels-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px var(--grey);
+  margin-bottom: var(--padding-bottom);
+  border-radius: 12px;
+  width: fit-content;
+}
+
 .hotels-image {
-  width: 343px;
-  overflow: hidden;
+  width: 310px;
+  height: 134px;
+  border-radius: 12px 12px 0 0;
+  padding: 0.3rem;
+}
+
+.hotels-description {
+  padding-left: var(--padding-bottom);
+}
+
+.see-more {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-bottom: var(--padding-bottom);
+}
+
+/* What to do in Marseille */
+
+.what-to-do-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  margin-bottom: var(--padding-bottom);
+  justify-content: center;
+  box-shadow: 1px 1px 10px var(--grey);
+}
+
+.what-to-do-title {
+  padding-left: var(--padding-bottom);
+}
+
+/* Footer */
+footer {
+  background-color: var(--grey);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: -2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer-items {
+  list-style-type: none;
+  padding-inline-start: 0;
+  line-height: 2rem;
+}
+
+/* Images */
+.top-hotel1 {
+  background-image: url(/resources/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 134px;
+  width: 125px;
+  border-radius: 12px 0 0 12px;
+}
+
+.top-hotel2 {
+  background-image: url(/resources/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 134px;
+  width: 125px;
+  border-radius: 12px 0 0 12px;
+}
+
+.top-hotel3 {
+  background-image: url(/resources/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 134px;
+  width: 125px;
+  border-radius: 12px 0 0 12px;
+}
+
+.hotel1 {
+  background-image: url(/resources/images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.hotel2 {
+  background-image: url(/resources/images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.hotel3 {
+  background-image: url(/resources/images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.hotel4 {
+  background-image: url(/resources/images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.hotel5 {
+  background-image: url(/resources/images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.hotel6 {
+  background-image: url(/resources/images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0.3rem;
+  height: 105px;
+  width: 310px;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image1 {
+  background-image: url(/resources/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image2 {
+  background-image: url(/resources/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image3 {
+  background-image: url(/resources/images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image4 {
+  background-image: url(/resources/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image5 {
+  background-image: url(/resources/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.what-to-do-image6 {
+  background-image: url(/resources/images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+  background-size: cover;
+  display: flex;
+  height: 105px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
 }
