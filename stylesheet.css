@@ -139,6 +139,9 @@ a {
   padding-top: 0;
   padding-bottom: 0;
 }
+::placeholder {
+  color: grey;
+}
 
 .searchbar-button {
   border: none;
@@ -596,7 +599,7 @@ footer {
 .what-to-do-image1 {
   background-image: url(/resources/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -605,7 +608,7 @@ footer {
 .what-to-do-image2 {
   background-image: url(/resources/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -614,7 +617,7 @@ footer {
 .what-to-do-image3 {
   background-image: url(/resources/images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -623,7 +626,7 @@ footer {
 .what-to-do-image4 {
   background-image: url(/resources/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -632,7 +635,7 @@ footer {
 .what-to-do-image5 {
   background-image: url(/resources/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -641,7 +644,7 @@ footer {
 .what-to-do-image6 {
   background-image: url(/resources/images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
   background-size: cover;
-  display: flex;
+  background-position: center;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
