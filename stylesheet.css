@@ -600,6 +600,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -609,6 +610,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -618,6 +620,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -627,6 +630,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -636,6 +640,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
@@ -645,6 +650,7 @@ footer {
   background-image: url(/resources/images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
   height: 105px;
   width: 100%;
   border-radius: 12px 12px 0 0;
