@@ -41,31 +41,38 @@ h1 {
 /* Navbar */
 .navbar {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.logo {
+  display: inline-block;
+  width: 50%;
+}
+
+.get-account {
+  order: 1;
+  font-weight: bold;
+  color: var(--blue);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 50%;
+  text-align: right;
 }
 
 .menu {
+  order: 2;
   display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  justify-content: space-around;
+  width: 100%;
   margin-top: 0;
   padding-bottom: var(--padding-bottom);
   margin-bottom: 0;
   padding-inline-start: 0;
-  overflow: visible;
-}
-
-.menu-logo-container {
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  padding-bottom: var(--padding-bottom);
 }
 
 .nav-item {
-  display: flex;
-  flex: 1 1 0px;
-  justify-content: center;
   list-style-type: none;
   padding-bottom: 0.5rem;
   border-bottom: solid var(--grey);
@@ -74,11 +81,6 @@ h1 {
 .nav-item:hover {
   color: var(--blue);
   border-bottom: solid var(--blue);
-}
-
-.get-account {
-  font-weight: bold;
-  color: var(--blue);
 }
 
 a {
