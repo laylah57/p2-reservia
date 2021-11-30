@@ -3,6 +3,7 @@
   --blue: #0065FC;
   --light-blue: #DEEBFF;
   --grey: #F2F2F2;
+  --dark-grey: grey;
   --main-font: 'Raleway', sans serif;
   --main-font-color: black;
   --padding-bottom: 1.5rem;
@@ -24,6 +25,7 @@ body {
   body {
     margin-left: 2.5rem;
     margin-right: 2rem;
+    margin-top: 5rem;
   }
 }
 
@@ -43,12 +45,32 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: initial;
+    background-color: white;
+  }
 }
 
 .logo {
   display: inline-block;
   width: 50%;
 }
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: initial;
+    flex-grow: 1;
+  }
+}
+/** Add specific rules for internet explorer : does not support flex-grow **/
 
 .get-account {
   order: 1;
@@ -59,6 +81,17 @@ h1 {
   cursor: pointer;
   width: 50%;
   text-align: right;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-account {
+    order: 2;
+    width: 10rem;
+    text-align: center;
+  }
+  .get-account:hover {
+    color: var(--dark-grey);
+  }
 }
 
 .menu {
@@ -72,8 +105,17 @@ h1 {
   padding-inline-start: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .menu {
+    order: 1;
+    width: initial;
+  }
+}
+
 .nav-item {
   list-style-type: none;
+  width: 50%;
+  text-align: center;
   padding-bottom: 0.5rem;
   border-bottom: solid var(--grey);
 } 
@@ -83,11 +125,31 @@ h1 {
   border-bottom: solid var(--blue);
 }
 
+@media only screen and (min-width: 768px) {
+  .nav-item {
+    border-bottom: none;
+    border-top: solid transparent;
+    padding-top: 2rem;
+    width: 10rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-item:hover {
+    border-bottom: none;
+    border-top: solid var(--blue);
+  }
+}
+
 a {
   text-decoration: none;
-} 
+}
 
 /* Header */
+.header {
+  top: 10;
+}
+
 .header-title{
   padding-bottom: var(--padding-bottom);
 }
@@ -142,7 +204,7 @@ a {
   padding-bottom: 0;
 }
 ::placeholder {
-  color: grey;
+  color: var(--dark-grey);
 }
 
 .searchbar-button {
